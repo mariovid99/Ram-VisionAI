@@ -5,77 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <style>
-      body {
-        font-family: "Times New Roman", Georgia, Serif;
-      }
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        font-family: "Playfair Display";
-        letter-spacing: 5px;
-      }
-
-      /* Container Styling */
-      .comparison-table-container {
-        max-width: 900px;
-        margin: 40px auto;
-        padding: 20px;
-        text-align: center;
-        font-family: Arial, sans-serif;
-      }
-
-      /* Header */
-      .comparison-table-container h2 {
-        color: #0d47a1;
-        font-size: 1.8em;
-        margin-bottom: 20px;
-      }
-
-      /* Table Styling */
-      .comparison-table {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      /* Header Row Styling */
-      .comparison-header {
-        display: contents;
-        background-color: #0d47a1;
-        color: white;
-        font-weight: bold;
-      }
-
-      /* Row Styling */
-      .comparison-row {
-        display: contents;
-        background-color: #f9f9f9;
-        border-bottom: 1px solid #ddd;
-      }
-
-      .comparison-row:nth-child(even) {
-        background-color: #e3e8f0;
-      }
-
-      /* Column Styling */
-      .column {
-        padding: 15px;
-        font-size: 1em;
-      }
-
-      /* Highlighted Column for Benefits of Own Model */
-      .highlight {
-        color: #0d47a1;
-        font-weight: bold;
-      }
-    </style>
+    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
     <!-- Navbar (sit on top) -->
@@ -95,59 +25,32 @@
     </div>
 
     <!-- Header -->
-    <header
-      style="
-        max-width: 1600px;
-        min-width: 500px;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        overflow: hidden;
-
-        padding-top: 5%;
-      "
-      id="home"
-    >
-      <img
-        src="wallpaper.jpg"
-        alt="wallpaper"
-        style="
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          filter: brightness(35%);
-          position: absolute;
-          top: 0;
-          left: 0;
-          z-index: 1;
-        "
-      />
+    <header class="header-format" id="home">
+      <img src="wallpaper.jpg" alt="wallpaper" class="wallpaper" />
       <div
         style="position: relative; z-index: 2; text-align: center; color: white"
       >
         <h1 style="font-size: 3em; margin: 0">
           Expertos en Visión e Inteligencia Artificial
         </h1>
-        <video width="50%" height="350" controls>
+        <!-- <video width="50%" height="350" controls>
           <source src="Video.mp4" type="video/mp4" />
-        </video>
+        </video> -->
       </div>
     </header>
 
     <!-- Page content -->
-    <div class="w3-content" style="max-width: 1100px">
+    <div class="w3-content total-container">
       <!-- About Section -->
 
       <div class="w3-row w3-padding-64" id="about">
         <div class="w3-col l6 w3-padding-large">
-          <h1 class="w3-center">Sobre Nosotros</h1>
+          <h1 class="w3-center title">Sobre Nosotros</h1>
           <br />
-          <h5 class="w3-center" style="color: #0d47a1">
+          <h5 class="w3-center subtitle">
             Soluciones en Vision Artificial a la medida
           </h5>
-          <p style="text-align: justify; font-family: verdana; font-size: 16px">
+          <p class="redaction">
             En Ram VisionAI somos especialistas en soluciones de Visión
             Artificial diseñadas para optimizar y asegurar procesos críticos en
             diversas industrias. Nos enfocamos en el
@@ -168,7 +71,7 @@
           </p>
         </div>
 
-        <div class="w3-col m6" style="padding-top: 10%; padding-left: 10%">
+        <div class="w3-col m6 imagen-right">
           <img src="wallpaper.jpg" alt="Table Setting" width="500" />
         </div>
       </div>
@@ -178,17 +81,17 @@
       <hr />
 
       <div class="w3-row w3-padding-64" id="about">
-        <div class="w3-col m6" style="padding-top: 10%">
+        <div class="w3-col m6 imagen-left">
           <img src="output_image.jpg" alt="Table Setting" width="500" />
         </div>
 
         <div class="w3-col m6 w3-padding-large">
-          <h1 class="w3-center">Seguridad Industrial</h1>
+          <h1 class="w3-center title">Seguridad Industrial</h1>
           <br />
-          <h5 class="w3-center" style="color: #0d47a1">
+          <h5 class="w3-center subtitle">
             Garatiza el cumplimiento de las normas de seguridad
           </h5>
-          <p style="text-align: justify; font-family: verdana; font-size: 16px">
+          <p class="redaction">
             En entornos industriales, garantizar el cumplimiento de protocolos
             de seguridad en todo momento es fundamental para evitar accidentes y
             mantener la seguridad del personal. Sin embargo, supervisar
@@ -206,16 +109,20 @@
             personal.
           </p>
         </div>
+
+        <div class="imagen-right aux">
+          <img src="output_image.jpg" alt="Table Setting" width="500" />
+        </div>
       </div>
 
       <div class="w3-row w3-padding-64" id="menu">
         <div class="w3-col l6 w3-padding-large">
-          <h1 class="w3-center">Productos Defectuosos</h1>
+          <h1 class="w3-center title">Productos Defectuosos</h1>
           <br />
-          <h5 class="w3-center" style="color: #0d47a1">
+          <h5 class="w3-center subtitle">
             Monitorea la calidad de tus productos en tiempo real
           </h5>
-          <p style="text-align: justify; font-family: verdana; font-size: 16px">
+          <p class="redaction">
             La presencia de defectos en productos durante el proceso de
             producción puede generar desperdicio, aumentar costos, y afectar la
             calidad percibida por el cliente final. Nuestro sistema
@@ -230,23 +137,23 @@
           </p>
         </div>
 
-        <div class="w3-col m6" style="padding-top: 10%; padding-left: 10%">
+        <div class="w3-col m6 imagen-right">
           <img src="defect2.jpg" alt="Table Setting" width="500" />
         </div>
       </div>
 
       <div class="w3-row w3-padding-64" id="about">
-        <div class="w3-col m6" style="padding-top: 10%">
+        <div class="w3-col m6 imagen-left">
           <img src="rest.jpg" alt="Table Setting" width="500" />
         </div>
 
         <div class="w3-col m6 w3-padding-large">
-          <h1 class="w3-center">Restaurantes</h1>
+          <h1 class="w3-center title">Restaurantes</h1>
           <br />
-          <h5 class="w3-center" style="color: #0d47a1">
+          <h5 class="w3-center subtitle">
             Prioriza la atención al cliente para potenciar la fidelización
           </h5>
-          <p style="text-align: justify; font-family: verdana; font-size: 16px">
+          <p class="redaction">
             En los restaurantes, la experiencia del cliente puede verse afectada
             si el tiempo de espera para ordenar o recibir la comida es excesivo.
             Esto impacta en la satisfacción del cliente y la eficiencia del
@@ -267,16 +174,20 @@
             potenciando la fidelización.
           </p>
         </div>
+
+        <div class="imagen-right aux">
+          <img src="rest.jpg" alt="Table Setting" width="500" />
+        </div>
       </div>
 
       <div class="w3-row w3-padding-64" id="menu">
         <div class="w3-col l6 w3-padding-large">
-          <h1 class="w3-center">Proyectos Personalizados</h1>
+          <h1 class="w3-center title">Proyectos Personalizados</h1>
           <br />
-          <h5 class="w3-center" style="color: #0d47a1">
+          <h5 class="w3-center subtitle">
             Hacemos realidad tus ideas específicamente para tu negocio
           </h5>
-          <p style="text-align: justify; font-family: verdana; font-size: 16px">
+          <p class="redaction">
             Cada empresa enfrenta desafíos únicos que requieren soluciones
             específicas para optimizar sus procesos y mejorar su competitividad
             en el mercado. En Ram VisionAI, trabajamos de la mano con nuestros
@@ -292,7 +203,7 @@
           </p>
         </div>
 
-        <div class="w3-col m6" style="padding-top: 10%; padding-left: 10%">
+        <div class="w3-col m6 imagen-right">
           <img src="defect.jpg" alt="Table Setting" width="500" />
         </div>
       </div>
@@ -364,7 +275,7 @@
           <br />
           <b>jaramario19@gmail.com</b>
         </p>
-        <p>Teléfono</p>
+        <p>Teléfonos</p>
         <p class="w3-text-blue-grey w3-large">
           <b>+52 811-066-6514</b>
           <br />

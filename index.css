@@ -1,0 +1,243 @@
+body {
+    font-family: "Times New Roman", Georgia, Serif;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+  }
+
+  /* Container Styling */
+  .comparison-table-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+  /* Header */
+  .comparison-table-container h2 {
+    color: #0d47a1;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+
+  /* Table Styling */
+  .comparison-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Header Row Styling */
+  .comparison-header {
+    display: contents;
+    background-color: #0d47a1;
+    color: white;
+    font-weight: bold;
+  }
+
+  /* Row Styling */
+  .comparison-row {
+    display: contents;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .comparison-row:nth-child(even) {
+    background-color: #e3e8f0;
+  }
+
+  /* Column Styling */
+  .column {
+    padding: 15px;
+    font-size: 1em;
+  }
+
+  /* Highlighted Column for Benefits of Own Model */
+  .highlight {
+    color: #0d47a1;
+    font-weight: bold;
+  }
+
+
+.total-container{
+    max-width: 1100px;
+}
+
+.subtitle{
+    color: #0d47a1
+}
+
+.redaction{
+    text-align: justify; 
+    font-family: verdana; 
+    font-size: 16px
+}
+
+.header-format{
+    max-width: 1600px;
+    min-width: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 5%;
+}
+
+.wallpaper{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(35%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.imagen-right{
+    padding-top: 10%; 
+    padding-left: 10%
+}
+
+.imagen-left{
+    padding-top: 10%;
+}
+.imagen-redaccion{
+    width: 500px;
+}
+
+.aux{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+     /* Container Styling */
+  .comparison-table-container {
+    max-width: 600px;
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    font-size: 0.8em;
+  }
+
+  /* Header */
+  .comparison-table-container h2 {
+    color: #0d47a1;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+  }
+
+  /* Table Styling */
+  .comparison-table {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Header Row Styling */
+  .comparison-header {
+    display: contents;
+    background-color: #0d47a1;
+    color: white;
+    font-weight: bold;
+  }
+
+  /* Row Styling */
+  .comparison-row {
+    display: contents;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .comparison-row:nth-child(even) {
+    background-color: #e3e8f0;
+  }
+
+  /* Column Styling */
+  .column {
+    padding: 15px;
+    font-size: 0.8em;
+  }
+
+  /* Highlighted Column for Benefits of Own Model */
+  .highlight {
+    color: #0d47a1;
+    font-weight: bold;
+  }
+
+
+.total-container{
+    max-width: 600px;
+    width: 550px;
+}
+
+.subtitle{
+    color: #0d47a1
+}
+
+.redaction{
+    text-align: justify; 
+    font-family: verdana; 
+    font-size: 16px
+}
+
+.header-format{
+    max-width: 600px;
+    width: 550px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    padding-top: 5%;
+}
+
+.wallpaper{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(35%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.imagen-right {
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;     /* Centrado vertical */
+    max-width: 600px;
+    padding-right: 10%;
+}
+
+
+.imagen-left{
+    display: none;
+}
+
+footer{
+    width: 550px;
+}
+
+  }
+
