@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>W3.CSS Template</title>
+    <title>RAM VisionAI</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
@@ -18,11 +18,68 @@
         font-family: "Playfair Display";
         letter-spacing: 5px;
       }
+
+      /* Container Styling */
+      .comparison-table-container {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Header */
+      .comparison-table-container h2 {
+        color: #0d47a1;
+        font-size: 1.8em;
+        margin-bottom: 20px;
+      }
+
+      /* Table Styling */
+      .comparison-table {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Header Row Styling */
+      .comparison-header {
+        display: contents;
+        background-color: #0d47a1;
+        color: white;
+        font-weight: bold;
+      }
+
+      /* Row Styling */
+      .comparison-row {
+        display: contents;
+        background-color: #f9f9f9;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .comparison-row:nth-child(even) {
+        background-color: #e3e8f0;
+      }
+
+      /* Column Styling */
+      .column {
+        padding: 15px;
+        font-size: 1em;
+      }
+
+      /* Highlighted Column for Benefits of Own Model */
+      .highlight {
+        color: #0d47a1;
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
     <!-- Navbar (sit on top) -->
-    <div class="w3-top">
+    <div class="w3-top" style="margin-bottom: 50px; z-index: 3">
       <div
         class="w3-bar w3-white w3-padding w3-card"
         style="letter-spacing: 4px"
@@ -37,38 +94,82 @@
       </div>
     </div>
 
+    <!-- Header -->
+    <header
+      style="
+        max-width: 1600px;
+        min-width: 500px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        overflow: hidden;
+
+        padding-top: 5%;
+      "
+      id="home"
+    >
+      <img
+        src="wallpaper.jpg"
+        alt="wallpaper"
+        style="
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: brightness(35%);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        "
+      />
+      <div
+        style="position: relative; z-index: 2; text-align: center; color: white"
+      >
+        <h1 style="font-size: 3em; margin: 0">
+          Expertos en Visión e Inteligencia Artificial
+        </h1>
+        <video width="50%" height="350" controls>
+          <source src="Video.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </header>
+
     <!-- Page content -->
     <div class="w3-content" style="max-width: 1100px">
       <!-- About Section -->
-      <div class="w3-row w3-padding-64" id="about">
-        <div class="w3-col m6 w3-padding-large w3-hide-small">
-          <img
-            src="output_image.jpg"
-            class="w3-round w3-image"
-            alt="Table Setting"
-            width="600"
-            height="750"
-          />
-        </div>
 
-        <div class="w3-col m6 w3-padding-large">
+      <div class="w3-row w3-padding-64" id="about">
+        <div class="w3-col l6 w3-padding-large">
           <h1 class="w3-center">Sobre Nosotros</h1>
           <br />
-          <h5 class="w3-center">Soluciones en Vision Artificial a la medida</h5>
-          <p class="w3-large">
+          <h5 class="w3-center" style="color: #0d47a1">
+            Soluciones en Vision Artificial a la medida
+          </h5>
+          <p style="text-align: justify; font-family: verdana; font-size: 16px">
             En Ram VisionAI somos especialistas en soluciones de Visión
             Artificial diseñadas para optimizar y asegurar procesos críticos en
-            diversas industrias. Nos enfocamos en el desarrollo de sistemas
-            inteligentes que analizan y monitorean en tiempo real, permitiendo a
-            nuestros clientes mejorar la seguridad, la eficiencia, y la calidad
-            de sus operaciones. Nuestra experiencia abarca desde la
-            identificación de defectos en productos hasta el monitoreo de
-            tiempos de servicio en restaurantes, y trabajamos con proyectos
-            personalizados para satisfacer las necesidades específicas de cada
-            empresa. Nuestro compromiso es impulsar la automatización y la
-            precisión operativa, ayudando a nuestros clientes a alcanzar sus
-            objetivos con innovación y tecnología de punta.
+            diversas industrias. Nos enfocamos en el
+            <b style="color: #0d47a1"
+              >desarrollo de sistemas inteligentes que analizan y monitorean en
+              tiempo real</b
+            >, permitiendo a nuestros clientes mejorar la seguridad, la
+            eficiencia, y la calidad de sus operaciones. Nuestra experiencia
+            abarca desde
+            <b style="color: #0d47a1"
+              >la identificación de defectos en productos hasta el monitoreo de
+              tiempos de servicio en restaurantes, y trabajamos con proyectos
+              personalizados </b
+            >para satisfacer las necesidades específicas de cada empresa Nuestro
+            compromiso es impulsar la automatización y la precisión operativa,
+            ayudando a nuestros clientes a alcanzar sus objetivos con innovación
+            y tecnología de punta.
           </p>
+        </div>
+
+        <div class="w3-col m6" style="padding-top: 10%; padding-left: 10%">
+          <img src="wallpaper.jpg" alt="Table Setting" width="500" />
         </div>
       </div>
 
@@ -77,32 +178,32 @@
       <hr />
 
       <div class="w3-row w3-padding-64" id="about">
-        <div class="w3-col m6 w3-padding-large w3-hide-small">
-          <img
-            src="output_image.jpg"
-            class="w3-round w3-image"
-            alt="Table Setting"
-            width="600"
-            height="750"
-          />
+        <div class="w3-col m6" style="padding-top: 10%">
+          <img src="output_image.jpg" alt="Table Setting" width="500" />
         </div>
 
         <div class="w3-col m6 w3-padding-large">
           <h1 class="w3-center">Seguridad Industrial</h1>
           <br />
-          <h5 class="w3-center">Soluciones en Vision Artificial a la medida</h5>
-          <p class="w3-large">
+          <h5 class="w3-center" style="color: #0d47a1">
+            Garatiza el cumplimiento de las normas de seguridad
+          </h5>
+          <p style="text-align: justify; font-family: verdana; font-size: 16px">
             En entornos industriales, garantizar el cumplimiento de protocolos
             de seguridad en todo momento es fundamental para evitar accidentes y
             mantener la seguridad del personal. Sin embargo, supervisar
             constantemente cada detalle es complejo y propenso a errores
-            humanos.Nuestro sistema de Visión Artificial monitorea en tiempo
-            real el cumplimiento de todos los protocolos de seguridad dentro de
-            la planta. Detecta automáticamente cualquier incumplimiento y envía
-            alertas al encargado correspondiente. Reduce el riesgo de
-            accidentes, asegura un ambiente de trabajo seguro y permite a las
-            empresas cumplir con normativas de seguridad, mejorando la
-            productividad sin comprometer la integridad del personal.
+            humanos. Nuestro sistema de Visión Artificial
+            <b style="color: #0d47a1"
+              >monitorea en tiempo real el cumplimiento de todos los protocolos
+              de seguridad dentro de la planta. Detecta automáticamente
+              cualquier incumplimiento y envía alertas al encargado
+              correspondiente.</b
+            >
+            Reduce el riesgo de accidentes, asegura un ambiente de trabajo
+            seguro y permite a las empresas cumplir con normativas de seguridad,
+            mejorando la productividad sin comprometer la integridad del
+            personal.
           </p>
         </div>
       </div>
@@ -111,93 +212,142 @@
         <div class="w3-col l6 w3-padding-large">
           <h1 class="w3-center">Productos Defectuosos</h1>
           <br />
-          <h5 class="w3-center">Soluciones en Vision Artificial a la medida</h5>
-          <p class="w3-large">
-            Problema: La presencia de defectos en productos durante el proceso
-            de producción puede generar desperdicio, aumentar costos, y afectar
-            la calidad percibida por el cliente final. Solución: Nuestro sistema
-            identifica y detecta imperfecciones específicas en los productos
-            durante la fabricación. A través de Inteligencia Artificial, es
-            capaz de analizar y detectar defectos en tiempo real, evitando que
-            productos defectuosos lleguen al cliente. Beneficios: Mejora la
+          <h5 class="w3-center" style="color: #0d47a1">
+            Monitorea la calidad de tus productos en tiempo real
+          </h5>
+          <p style="text-align: justify; font-family: verdana; font-size: 16px">
+            La presencia de defectos en productos durante el proceso de
+            producción puede generar desperdicio, aumentar costos, y afectar la
+            calidad percibida por el cliente final. Nuestro sistema
+            <b style="color: #0d47a1"
+              >identifica y detecta imperfecciones específicas en los productos
+              durante la fabricación,
+            </b>
+            evitando que productos defectuosos lleguen al cliente. Mejora la
             calidad del producto final, reduce costos asociados al desperdicio y
             retrabajo, y permite a las empresas garantizar altos estándares de
             calidad en cada unidad producida.
           </p>
         </div>
 
-        <div class="w3-col l6 w3-padding-large">
-          <img
-            src="/w3images/tablesetting.jpg"
-            class="w3-round w3-image w3-opacity-min"
-            alt="Menu"
-            style="width: 100%"
-          />
+        <div class="w3-col m6" style="padding-top: 10%; padding-left: 10%">
+          <img src="defect2.jpg" alt="Table Setting" width="500" />
         </div>
       </div>
 
       <div class="w3-row w3-padding-64" id="about">
-        <div class="w3-col m6 w3-padding-large w3-hide-small">
-          <img
-            src="output_image.jpg"
-            class="w3-round w3-image"
-            alt="Table Setting"
-            width="600"
-            height="750"
-          />
+        <div class="w3-col m6" style="padding-top: 10%">
+          <img src="rest.jpg" alt="Table Setting" width="500" />
         </div>
 
         <div class="w3-col m6 w3-padding-large">
           <h1 class="w3-center">Restaurantes</h1>
           <br />
-          <h5 class="w3-center">Soluciones en Vision Artificial a la medida</h5>
-          <p class="w3-large">
+          <h5 class="w3-center" style="color: #0d47a1">
+            Prioriza la atención al cliente para potenciar la fidelización
+          </h5>
+          <p style="text-align: justify; font-family: verdana; font-size: 16px">
             En los restaurantes, la experiencia del cliente puede verse afectada
             si el tiempo de espera para ordenar o recibir la comida es excesivo.
             Esto impacta en la satisfacción del cliente y la eficiencia del
-            servicio. Solución: Nuestro sistema de Visión Artificial monitorea
-            cada mesa desde la llegada de los comensales y lleva un conteo de
-            tiempo. En caso de demoras para tomar la orden o entregar los
-            alimentos, el sistema envía alertas al personal para asegurar un
-            servicio eficiente y oportuno. Beneficios: Mejora la experiencia del
-            cliente, optimiza el flujo de trabajo del personal, y permite a los
-            restaurantes mantener un estándar de servicio más alto,
-            incrementando la satisfacción del cliente y potenciando la
-            fidelización.
-          </p>
-          <p class="w3-large w3-text-grey w3-hide-medium">
-            Chat GPT Redaccion en gris
+            servicio. Nuestro sistema de Visión Artificial
+            <b style="color: #0d47a1"
+              >monitorea cada mesa desde la llegada de los comensales y lleva un
+              conteo de tiempo.</b
+            >
+            En caso de demoras para tomar la orden o entregar los alimentos, el
+            sistema
+            <b style="color: #0d47a1"
+              >envía alertas al personal para asegurar un servicio eficiente y
+              oportuno.</b
+            >
+            Mejora la experiencia del cliente, optimiza el flujo de trabajo del
+            personal, y permite a los restaurantes mantener un estándar de
+            servicio más alto, incrementando la satisfacción del cliente y
+            potenciando la fidelización.
           </p>
         </div>
       </div>
 
       <div class="w3-row w3-padding-64" id="menu">
         <div class="w3-col l6 w3-padding-large">
-          <h1 class="w3-center">Proyectos Personalizados a la Medida</h1>
+          <h1 class="w3-center">Proyectos Personalizados</h1>
           <br />
-          <h5 class="w3-center">Soluciones en Vision Artificial a la medida</h5>
-          <p class="w3-large">
-            Problema: Cada empresa enfrenta desafíos únicos que requieren
-            soluciones específicas para optimizar sus procesos y mejorar su
-            competitividad en el mercado. Solución: En Ram VisionAI, trabajamos
-            de la mano con nuestros clientes para desarrollar soluciones de
-            Visión Artificial que se adapten a sus necesidades específicas.
-            Analizamos y diseñamos proyectos personalizados que automatizan y
-            optimizan procesos clave para la empresa. Beneficios: Permite a las
-            empresas innovar en sus operaciones, mejorar la eficiencia y reducir
-            costos, además de brindar una solución adaptada a sus objetivos y
-            retos específicos, generando un impacto positivo en su rentabilidad
-            y desempeño.
+          <h5 class="w3-center" style="color: #0d47a1">
+            Hacemos realidad tus ideas específicamente para tu negocio
+          </h5>
+          <p style="text-align: justify; font-family: verdana; font-size: 16px">
+            Cada empresa enfrenta desafíos únicos que requieren soluciones
+            específicas para optimizar sus procesos y mejorar su competitividad
+            en el mercado. En Ram VisionAI, trabajamos de la mano con nuestros
+            clientes para desarrollar soluciones de Visión Artificial que se
+            adapten a sus necesidades específicas.
+            <b style="color: #0d47a1"
+              >Analizamos y diseñamos proyectos personalizados que automatizan y
+              optimizan procesos clave para la empresa</b
+            >. Permite a las empresas innovar en sus operaciones, mejorar la
+            eficiencia y reducir costos, además de brindar una solución adaptada
+            a sus objetivos y retos específicos, generando un impacto positivo
+            en su rentabilidad y desempeño.
           </p>
         </div>
 
-        <div class="w3-col l6 w3-padding-large">
-          <img
-            src="/w3images/tablesetting.jpg"
-            class="w3-round w3-image w3-opacity-min"
-            alt="Menu"
-            style="width: 100%"
-          />
+        <div class="w3-col m6" style="padding-top: 10%; padding-left: 10%">
+          <img src="defect.jpg" alt="Table Setting" width="500" />
+        </div>
+      </div>
+
+      <div class="comparison-table-container">
+        <h2>¿Por qué elegir un modelo propio sobre uno general?</h2>
+        <div class="comparison-table">
+          <div class="comparison-header">
+            <div class="column" style="color: black">Beneficios</div>
+            <div class="column" style="color: black">Modelo Propio</div>
+            <div class="column" style="color: black">Modelo General</div>
+          </div>
+          <div class="comparison-row">
+            <div class="column">Rapidez y Precisión</div>
+            <div class="column highlight">
+              Ajustado para reducir inspección en un 30% y mejorar la
+              efectividad hasta un 20%.
+            </div>
+            <div class="column">Optimización general, menos específica.</div>
+          </div>
+          <div class="comparison-row">
+            <div class="column">Ahorro de Costos</div>
+            <div class="column highlight">
+              Reducción significativa en mantenimientos y reentrenamientos.
+            </div>
+            <div class="column">
+              Necesita ajustes frecuentes y costos recurrentes.
+            </div>
+          </div>
+          <div class="comparison-row">
+            <div class="column">Generación de Datos</div>
+            <div class="column highlight">
+              Datos personalizados para KPIs y dashboards específicos.
+            </div>
+            <div class="column">
+              Datos estandarizados, menos adaptables a necesidades específicas.
+            </div>
+          </div>
+          <div class="comparison-row">
+            <div class="column">Aprendizaje Continuo</div>
+            <div class="column highlight">
+              Adaptación continua a cambios en producción y estándares de
+              calidad.
+            </div>
+            <div class="column">
+              Menos flexible a cambios en procesos y estándares.
+            </div>
+          </div>
+          <div class="comparison-row">
+            <div class="column">Adaptación y Escalabilidad</div>
+            <div class="column highlight">
+              Modelo que evoluciona con tu negocio, escalable y flexible.
+            </div>
+            <div class="column">Limitado en adaptabilidad y escalabilidad.</div>
+          </div>
         </div>
       </div>
 
@@ -205,7 +355,7 @@
       <div class="w3-container w3-padding-64" id="contact">
         <h1>Contáctanos</h1>
         <br />
-        <p>
+        <p style="text-align: justify; font-family: verdana; font-size: 16px">
           Para mas información, estamos a su disposición en los siguientes
           correos:
         </p>
